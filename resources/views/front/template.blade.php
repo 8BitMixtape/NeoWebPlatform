@@ -39,7 +39,7 @@
     </header>
 
 
- <div class="tc b--black-10 pa4  bg-dark-pink " >
+ <div class="tc b--black-10 pa4  bg-dark-pink neoboard-gradient" >
     <div class=" tc-l">
 
         <div>
@@ -47,7 +47,7 @@
         </div>
 
 
-        <div class="center mw7 mb4" data-flickity='{  }'>
+        <div class="center mw7  mb4" data-flickity='{  }'>
             <div class="w-100 w-100-m w-100-l">
                  <img class="" src="svg/neoboard.svg"  alt="">
             </div>            
@@ -59,7 +59,7 @@
 
 
         <a class="w-100 w-80-m w-20-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 mb3 dib" href="/components/">[View Docs]</a>
-        <a class="w-100 w-80-m w-20-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 mb3 dib" href="/components/">[View Source]</a>
+        <a class="w-100 w-80-m w-20-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 mb3 dib" href="http://github.com/8BitMixtape/">[View Source]</a>
         <a class="w-100 w-80-m w-20-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 dib" href="http://unpkg.com/tachyons/css/tachyons.min.css">[Buy Mixtape]</a>
     </div>
 
