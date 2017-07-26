@@ -28,7 +28,7 @@
 
 
 <section class="sans-serif  w-100 bg-black" >
-    <header class=" w-100 tl tl-m  tc-l bb b--orange pa3" >
+    <header class=" w-100 tl tl-m  tc-l b--orange pa3" >
             <nav class="ttu ">
                 <a class="mw10 link db db-m di-m di-l pa2 tl pink  black90 tracked-mega fontbit" href="#" title="Home">8BITMIXTAPE</a>
                 <a class="mw10 link db db-m di-m di-l pa2 tl neon-green dim black90 tracked-mega fontbit" href="index.html" title="Home">/MIXTAPE_EXCHANGE</a>
