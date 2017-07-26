@@ -1,4 +1,4 @@
-@extends('front.template')
+@extends('front.template_neo')
 
 @section('main')
     <div class="row">
