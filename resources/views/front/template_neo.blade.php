@@ -31,6 +31,7 @@
           title="Store">/BUY</a>
       </nav>
     </header>
+    @yield('hero')
   </section>
 
   @yield('main')

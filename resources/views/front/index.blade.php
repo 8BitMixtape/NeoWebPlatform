@@ -1,7 +1,6 @@
 @extends('front.template_neo')
 
-@section('main')
-
+@section('hero')
   <div class="tc b--black-10 pa4 bg-dark-pink vh-100-l neoboard-gradient">
     <div class=" tc-l">
       <div>
@@ -17,6 +16,9 @@
       <a class="w-100 w-80-m w-20-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 dib" href="http://unpkg.com/tachyons/css/tachyons.min.css">[Buy Mixtape]</a>
     </div>
   </div>
+@endsection
+
+@section('main')
 
   <section class="cf pa5 items-center  bg-white ">
     <div class="fl w-100 w-100-m mb5-m w-40-l tc">

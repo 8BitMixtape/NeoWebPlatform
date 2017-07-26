@@ -1,44 +1,36 @@
 @extends('front.template_neo')
 
 @section('main')
-    <div class="row">
-        <div class="box">
-            <div class="col-lg-12">
-                @if(session()->has('error'))
-                    @include('partials/error', ['type' => 'danger', 'message' => session('error')])
-                @endif	
-                <hr>	
-                <h2 class="intro-text text-center">{{ trans('front/login.connection') }}</h2>
-                <hr>
-                <p>{{ trans('front/login.text') }}</p>				
+<main class="pa4 black-80">
 
-                {!! Form::open(['url' => 'login']) !!}	
+@if(session()->has('error'))
+    @include('partials/error', ['type' => 'danger', 'message' => session('error')])
+@endif	
 
-                    <div class="row">
+{{--  {!! link_to('password/reset', trans('front/login.forget')) !!}  --}}
+{{--  {!! link_to('register', trans('front/login.registering'), ['class' => 'btn btn-default']) !!}  --}}
 
-                        {!! Form::controlBootstrap('text', 6, 'log', $errors, trans('front/login.log')) !!}
-                        {!! Form::controlBootstrap('password', 6, 'password', $errors, trans('front/login.password')) !!}
-                        {!! Form::submitBootstrap(trans('front/form.send'), 'col-lg-12') !!}
-                        {!! Form::checkboxBootstrap('memory', trans('front/login.remind')) !!}
-                        {!! Form::text('address', '', ['class' => 'hpet']) !!}		  
-                        <div class="col-lg-12">					
-                            {!! link_to('password/reset', trans('front/login.forget')) !!}
-                        </div>
-
-                    </div>
-
-                {!! Form::close() !!}
-
-                <div class="text-center">
-                    <hr>
-                    <h2 class="intro-text text-center">{{ trans('front/login.register') }}</h2>
-                    <hr>	
-                    <p>{{ trans('front/login.register-info') }}</p>
-                    {!! link_to('register', trans('front/login.registering'), ['class' => 'btn btn-default']) !!}
-                </div>
-
-            </div>
-        </div>
+{!! Form::open(['url' => 'login', 'class' => 'measure left']) !!}	
+    <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+      <legend class="f4 fw6 ph0 mh0">Sign In</legend>
+      <div class="mt3">
+        <label class="db fw6 lh-copy f6" for="email-address">Email</label>
+        <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="log"  id="email-address">
+      </div>
+      <div class="mv3">
+        <label class="db fw6 lh-copy f6" for="password">Password</label>
+        <input class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password"  id="password">
+      </div>
+      <label class="pa0 ma0 lh-copy f6 pointer"><input type="checkbox"> Remember me</label>
+    </fieldset>
+    <div class="">
+      <input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in">
     </div>
+    <div class="lh-copy mt3">
+      {!! link_to('register', "Sign up", ['class' => 'f6 link dim black db']) !!}
+      <a href="#0" class="f6 link dim black db">Forgot your password?</a>
+    </div>
+{!! Form::close() !!}
+</main>
 @endsection
 
