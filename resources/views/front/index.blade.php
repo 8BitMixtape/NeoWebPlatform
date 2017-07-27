@@ -20,14 +20,14 @@
 
 @section('main')
 
-  <section class="cf pa5 items-center  bg-white ">
+  <section class="cf pa5-ns items-center  bg-white ">
     <div class="fl w-100 w-100-m mb5-m w-40-l tc">
       <img class="" src="https://8bitmixtape.github.io/NeoWiki/images/boards/Pins_NEO-Coconut_v03.jpg">
     </div>
 
     <div class="fl w-100  w-100-m  w-60-l db tc tl-ns ph3">
       <h1 class="f3 f1-l fw2 mb3 mt4 mt0-ns black fontbit lh-copy hot-pink">Features:</h1>
-      <h2 class="f5 f3-m f3-l fw1 mb4 mb5-l lh-title black-60">The key feature of the new 8Bit Mixtape is the easiness of uploading new codes using an audio communication protocol,
+      <h2 class="f5 f3-m f3-l fw1 mb4 mb5-l lh-title black-60 tl">The key feature of the new 8Bit Mixtape is the easiness of uploading new codes using an audio communication protocol,
         means just playing a .wav sound file from your computer/smart phone (or walkman). A specific bootloader (TinyAudioBoot)
         has to be installed on the chip to be able to do so. The bootloader is the first program that is started when you
         turn on your mixtape. you should see the right led blinking slowly. The bootloader is in waiting programmable mode
@@ -111,7 +111,7 @@
     <div class="cover">
       <div class="tc-l tc-m tc">
         <h2 class="mb5 black70">a project by:</h2>
-        <h1 class="fontcomic f1 f-subheadline-m tc tc-m f-headline-l mb5 purple">Center of Alternative Coconut Research</h1>
+        <h1 class="fontcomic f2 f-subheadline-m tc tc-m f-headline-l mb5 purple">Center of Alternative Coconut Research</h1>
         <img class="w-100 w-40-l w-60-m tc" width="100%" src="svg/cocologo.svg" alt=""></img>
       </div>
     </div>
