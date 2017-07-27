@@ -43,15 +43,15 @@
 </section>
 
 <div class="pa4">
-  <h1 class="f4 bold center black  fontbit center tl-ns f2-ns black lh-copy lh-title-ns">DOWNLOAD MIXTAPE</h1>
+  <h1 class="f4 bold center black mb4 fontbit center tl-ns f2-ns black lh-copy lh-copy-m lh-title-ns">DOWNLOAD MIXTAPE</h1>
   <div class="overflow-auto">
-    <table class="f6 w-100 center fontbit tracked-mega bg-black white" cellspacing="0">
+    <table class="f6 w-100 center fontbit tracked-mega bg-green white" cellspacing="0">
       <thead>
-        <tr class="stripe-dark">
-          <th class="fw6 tl pa3 bg-white">Name</th>
-          <th class="fw6 tl pa3 bg-white">Username</th>
-          <th class="fw6 tl pa3 bg-white">Email</th>
-          <th class="fw6 tl pa3 bg-white">ID</th>
+        <tr class="white bg-black ">
+          <th class="fw6 tl pa3 ">NAME</th>
+          <th class="fw6 tl pa3 ">DESCRITION</th>
+          <th class="fw6 tl pa3 ">USER</th>
+          <th class="fw6 tl pa3 ">DOWNLOAD</th>
         </tr>
       </thead>
       <tbody class="lh-copy">
