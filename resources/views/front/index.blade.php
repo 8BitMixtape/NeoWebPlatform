@@ -11,11 +11,11 @@
         <img class="" src="svg/neoboard.svg" alt="">
       </div>
       <div>
-        <a class="w-100 w-80-m w-30-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 mb3 dib" target="_blank"
+        <a class="mw5 w-100 w-80-m w-30-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 mb3 dib" target="_blank"
           href="http://8bitmixtape.github.io/NeoWiki">[View Docs]</a>
-        <a class="w-100 w-80-m w-30-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 mb3 dib" target="_blank"
+        <a class="mw5 w-100 w-80-m w-30-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 mb3 dib" target="_blank"
           href="http://github.com/8BitMixtape/">[View Source]</a>
-        <a class="w-100 w-80-m w-30-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 dib" href="#">[Buy Mixtape]</a>
+        <a class="mw5 w-100 w-80-m w-30-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 dib" href="#">[Buy Mixtape]</a>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
 
   <div class="fl w-100  w-100-m  w-60-l db tc tl-ns ph3">
     <h1 class="f3 f1-l fw2 mb3 mt4 mt0-ns black fontbit lh-copy hot-pink">Features:</h1>
-    <h2 class="f5 f4-m f4-l fw1 mb4 mb5-l lh-title black-60 tl">The key feature of the new 8Bit Mixtape is the easiness of uploading new codes using an audio communication protocol,
+    <h2 class="f5 f4-m f4-l fw1 mb4 mb5-l lh-title black-80 tl">The key feature of the new 8Bit Mixtape is the easiness of uploading new codes using an audio communication protocol,
       means just playing a .wav sound file from your computer/smart phone (or walkman). A specific bootloader (TinyAudioBoot)
       has to be installed on the chip to be able to do so. The bootloader is the first program that is started when you turn
       on your mixtape. you should see the right led blinking slowly. The bootloader is in waiting programmable mode for 5
