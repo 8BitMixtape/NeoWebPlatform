@@ -21,7 +21,7 @@
 @section('main')
 
   <section class="cf pa5-ns items-center  bg-white ">
-    <div class="fl w-100 w-100-m mb5-m w-40-l tc">
+    <div class="fl w-100 w-100-m mt4 mt2-ns mb5-m w-40-l tc">
       <img class="" src="https://8bitmixtape.github.io/NeoWiki/images/boards/Pins_NEO-Coconut_v03.jpg">
     </div>
 
