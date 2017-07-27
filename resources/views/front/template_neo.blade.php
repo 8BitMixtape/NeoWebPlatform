@@ -23,7 +23,7 @@
     <header class=" w-100 tl tl-m  tc-l b--orange pa3">
       <nav class="ttu ">
         <a class="mw10 link db db-m di-m di-l pa2 tl light-purple  black90 tracked-mega fontbit" href="/" title="Home">8BITMIXTAPE</a>
-        <a class="mw10 link db db-m di-m di-l pa2 tl neon-green dim black90 tracked-mega fontbit" href="#" title="Home">/MIXTAPE_EXCHANGE</a>
+        <a class="mw10 link db db-m di-m di-l pa2 tl neon-green dim black90 tracked-mega fontbit" href="/exchange" title="Home">/MIXTAPE_EXCHANGE</a>
         <a class="mw10 link db db-m di-m di-l pa2 tl neon-green dim black90 tracked-mega fontbit" href="#" title="About">/COMMUNITY</a>
         <a class="mw10 link db db-m di-m di-l pa2 tl neon-green dim black90 tracked-mega fontbit" href="https://8bitmixtape.github.io/NeoWiki/#/Home"
           title="Store">/DOCS</a>

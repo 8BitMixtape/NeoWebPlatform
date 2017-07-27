@@ -3,6 +3,8 @@
 // Home
 Route::get('/', 'HomeController')->name('home');
 
+Route::get('/exchange', 'ExchangeController')->name('exchange');
+
 // Language
 Route::get('language/{lang}', 'LanguageController')
     ->where('lang', implode('|', config('app.languages')));
