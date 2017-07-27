@@ -11,9 +11,9 @@
           <img class="" src="svg/neoboard.svg" alt="">
         </div>
       </div>
-      <a class="w-100 w-80-m w-20-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 mb3 dib" href="/components/">[View Docs]</a>
-      <a class="w-100 w-80-m w-20-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 mb3 dib" href="http://github.com/8BitMixtape/">[View Source]</a>
-      <a class="w-100 w-80-m w-20-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 dib" href="http://unpkg.com/tachyons/css/tachyons.min.css">[Buy Mixtape]</a>
+      <a class="w-100 w-80-m w-20-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 mb3 dib" target="_blank" href="http://8bitmixtape.github.io/NeoWiki">[View Docs]</a>
+      <a class="w-100 w-80-m w-20-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 mb3 dib" target="_blank" href="http://github.com/8BitMixtape/">[View Source]</a>
+      <a class="w-100 w-80-m w-20-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 dib" href="#">[Buy Mixtape]</a>
     </div>
   </div>
 @endsection
@@ -43,69 +43,54 @@
 
 
 
-  <article class="pa5 b--orange bg-black">
-    <h2 class="f3 fw4 pa3 mv0 tracked-mega white fontbit tc neon-green">// DEMO PROGRAM \\</h2>
-    <div class="cf pa2">
-      <div class="fl w-100 w-50-m w-20-l pa2">
-        <a href="https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
-        <img src="/img/noise.png"" alt="Frank Ocean Blonde Album Cover" class="w-100 db outline black-10"/>
-        <dl class="mt2 f6 lh-copy">
-          <dt class="clip">Title</dt>
-          <dd class="ml0 black truncate w-100">Blonde</dd>
-          <dt class="clip">Artist</dt>
-          <dd class="ml0 gray truncate w-100">Frank Ocean</dd>
-        </dl>
-      </a>
-      </div>
-      <div class="fl w-100 w-50-m w-20-l pa2">
-        <a href="https://geo.itunes.apple.com/us/album/jeffery/id1146718343?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
-        <img src="/img/noise.png"" alt="Young Thug - Jeffery Album Cover" class="w-100 db outline black-10"/>
-        <dl class="mt2 f6 lh-copy">
-          <dt class="clip">Title</dt>
-          <dd class="ml0 black truncate w-100 ttu">Jeffery</dd>
-          <dt class="clip">Artist</dt>
-          <dd class="ml0 gray truncate w-100">Young Thug</dd>
-        </dl>
-      </a>
-      </div>
-      <div class="fl w-100 w-50-m w-20-l pa2">
-        <a href="https://geo.itunes.apple.com/us/album/untitled-unmastered./id1089846273?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
-        <img src="/img/noise.png"" alt="Kendrick Lamar untitled unmastered. Album Cover" class="w-100 db outline black-10"/>
-        <dl class="mt2 f6 lh-copy">
-          <dt class="clip">Title</dt>
-          <dd class="ml0 black truncate w-100">untitled umastered.</dd>
-          <dt class="clip">Artist</dt>
-          <dd class="ml0 gray truncate w-100">Kendrick Lamar</dd>
-        </dl>
-      </a>
-      </div>
-      <div class="fl w-100 w-50-m w-20-l pa2">
-        <a href="https://geo.itunes.apple.com/us/album/99.9/id1092026376?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
-        <img src="/img/noise.png" alt="Kaytranada 99%" class="w-100 db outline black-10"/>
-        <dl class="mt2 f6 lh-copy">
-          <dt class="clip">Title</dt>
-          <dd class="ml0 black truncate w-100">99%</dd>
-          <dt class="clip">Artist</dt>
-          <dd class="ml0 gray truncate w-100">Kaytranada</dd>
-        </dl>
-      </a>
-      </div>
-      <div class="fl w-100 w-50-m w-20-l pa2">
-        <a href="https://geo.itunes.apple.com/us/album/aa/id1067924003?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
-        <img src="/img/noise.png"" alt="Baauer Aa - Album Cover" class="w-100 db outline black-10"/>
-        <dl class="mt2 f6 lh-copy">
-          <dt class="clip">Title</dt>
-          <dd class="ml0 black truncate w-100">Aa</dd>
-          <dt class="clip">Artist</dt>
-          <dd class="ml0 gray truncate w-100">Baauer</dd>
-        </dl>
-      </a>
-      </div>
 
-    </div>
-  </article>
-
-
+<div class="pa4">
+  <h1 class="f4 bold center black  fontbit center tl-ns f2-ns black">DOWNLOAD MIXTAPE</h1>  
+  <div class="overflow-auto">
+    <table class="f6 w-100 center fontbit tracked-mega bg-black white" cellspacing="0">
+      <thead>
+        <tr class="stripe-dark">
+          <th class="fw6 tl pa3 bg-white">Name</th>
+          <th class="fw6 tl pa3 bg-white">Username</th>
+          <th class="fw6 tl pa3 bg-white">Email</th>
+          <th class="fw6 tl pa3 bg-white">ID</th>
+        </tr>
+      </thead>
+      <tbody class="lh-copy">
+        <tr class="stripe-dark">
+          <td class="pa3">Hassan Johnson</td>
+          <td class="pa3">@hassan</td>
+          <td class="pa3">hassan@companywithalongdomain.co</td>
+          <td class="pa3">14419232532474</td>
+        </tr>
+        <tr class="stripe-dark">
+          <td class="pa3">Taral Hicks</td>
+          <td class="pa3">@hicks</td>
+          <td class="pa3">taral@companywithalongdomain.co</td>
+          <td class="pa3">72326219423551</td>
+        </tr>
+        <tr class="stripe-dark">
+          <td class="pa3">Tyrin Turner</td>
+          <td class="pa3">@tt</td>
+          <td class="pa3">ty@companywithalongdomain.co</td>
+          <td class="pa3">92325170324444</td>
+        </tr>
+        <tr class="stripe-dark">
+          <td class="pa3">Oliver Grant</td>
+          <td class="pa3">@oli</td>
+          <td class="pa3">oliverg@companywithalongdomain.co</td>
+          <td class="pa3">71165170352909</td>
+        </tr>
+        <tr class="stripe-dark">
+          <td class="pa3">Dean Blanc</td>
+          <td class="pa3">@deanblanc</td>
+          <td class="pa3">dean@companywithalongdomain.co</td>
+          <td class="pa3">71865178111909</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
   <section class="sans-serif pa5 mw9 bg-light-green">
     <div class="cover">
