@@ -4,7 +4,7 @@
   <div class="tc b--black-10 pa4 bg-dark-pink vh-100-l neoboard-gradient">
     <div class=" tc-l">
       <div>
-        <img src="https://i.imgur.com/aUPxPgg.png" class="tc tc-l" alt=""></img>
+        <img src="/img/neologo_header.png" class="tc tc-l" alt=""></img>
       </div>
       <div class="center mw7  mb4">
         <div class="w-100 w-100-m w-100-l">
