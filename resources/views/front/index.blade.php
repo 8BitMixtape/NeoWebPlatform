@@ -1,12 +1,12 @@
 @extends('front.template_neo') 
 
 @section('hero')
-<div class="tc b--black-10 pt4 bg-dark-pink neoboard-gradient">
+<div class="tc b--black-10 pt4 pb2 bg-dark-pink neoboard-gradient">
   <div class=" tc-l">
     <div>
       <img src="/img/neologo_header.png" class="tc tc-l" alt=""></img>
     </div>
-    <div class="center mw7  mb4">
+    <div class="center mw7 mb4">
       <div class="w-100 w-100-m w-100-l">
         <img class="" src="svg/neoboard.svg" alt="">
       </div>
@@ -16,7 +16,6 @@
         <a class="w-100 w-80-m w-30-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 mb3 dib" target="_blank"
           href="http://github.com/8BitMixtape/">[View Source]</a>
         <a class="w-100 w-80-m w-30-l ba b--white no-underline tracked fontbit dim pa3 br2 bg-purple white mr3 dib" href="#">[Buy Mixtape]</a>
-
       </div>
     </div>
   </div>
