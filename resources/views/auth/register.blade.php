@@ -1,34 +1,33 @@
-@extends('front.template')
+@extends('front.template_neo')
 
 @section('main')
-    <div class="row">
-        <div class="box">
-            <div class="col-lg-12">
-                <hr>	
-                <h2 class="intro-text text-center">{{ trans('front/register.title') }}</h2>
-                <hr>
-                <p>{{ trans('front/register.infos') }}</p>		
 
-                {!! Form::open(['url' => 'register']) !!}	
 
-                    <div class="row">
-                        {!! Form::controlBootstrap('text', 6, 'username', $errors, trans('front/register.pseudo'), null, [trans('front/register.warning'), trans('front/register.warning-name')]) !!}
-                        {!! Form::controlBootstrap('email', 6, 'email', $errors, trans('front/register.email')) !!}
-                    </div>
-                    <div class="row">	
-                        {!! Form::controlBootstrap('password', 6, 'password', $errors, trans('front/register.password'), null, [trans('front/register.warning'), trans('front/register.warning-password')]) !!}
-                        {!! Form::controlBootstrap('password', 6, 'password_confirmation', $errors, trans('front/register.confirm-password')) !!}
-                    </div>
-                    {!! Form::text('address', '', ['class' => 'hpet']) !!}	
-                    <div class="row">	
-                        {!! Form::submitBootstrap(trans('front/form.send'), 'col-lg-12') !!}
-                    </div>
+<article class="pa4 black-80">
+  {!! Form::open(['url' => 'register']) !!}	
+    <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+      <legend class="ph0 mh0 fw6 clip">Sign Up</legend>
+      <div class="mt3">
+        <label class="db fw4 lh-copy f6" for="email-address">Username</label>
+        <input class="pa2 input-reset ba bg-transparent w-100 measure" type="email" name="username"  id="email-address">
+      </div>
+      <div class="mt3">
+        <label class="db fw4 lh-copy f6" for="email-address">Email address</label>
+        <input class="pa2 input-reset ba bg-transparent w-100 measure" type="email" name="email"  id="email-address">
+      </div>
+      <div class="mt3">
+        <label class="db fw4 lh-copy f6" for="password">Password</label>
+        <input class="b pa2 input-reset ba bg-transparent" type="password" name="password"  id="password">
+      </div>
+      <div class="mt3">
+        <label class="db fw4 lh-copy f6" for="password">Password Confirmation</label>
+        <input class="b pa2 input-reset ba bg-transparent" type="password" name="password_confirmation"  id="password">
+      </div>
+    </fieldset>
+    <div class="mt3"><input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6" type="submit" value="Sign Up"></div>
+  {!! Form::close() !!}
+</article>
 
-                {!! Form::close() !!}
-
-            </div>
-        </div>
-    </div>
 @endsection
 
 @section('scripts')
