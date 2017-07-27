@@ -43,7 +43,7 @@
 </section>
 
 <div class="pa4">
-  <h1 class="f4 bold center black  fontbit center tl-ns f2-ns black">DOWNLOAD MIXTAPE</h1>
+  <h1 class="f4 bold center black  fontbit center tl-ns f2-ns black lh-copy lh-title-ns">DOWNLOAD MIXTAPE</h1>
   <div class="overflow-auto">
     <table class="f6 w-100 center fontbit tracked-mega bg-black white" cellspacing="0">
       <thead>
