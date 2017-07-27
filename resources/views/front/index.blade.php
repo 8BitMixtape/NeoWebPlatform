@@ -7,7 +7,7 @@
       <img src="/img/neologo_header.png" class="tc tc-l" alt=""></img>
     </div>
     <div class="center mw7 mb4">
-      <div class="center w-100 w-70-m w-100-l">
+      <div class="center w-100 w-90-m w-100-l">
         <img class="" src="svg/neoboard.svg" alt="">
       </div>
       <div>
