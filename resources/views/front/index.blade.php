@@ -1,7 +1,7 @@
 @extends('front.template_neo') 
 
 @section('hero')
-<div class="tc b--black-10 pa2 bg-dark-pink neoboard-gradient">
+<div class="tc b--black-10 pt4 bg-dark-pink neoboard-gradient">
   <div class=" tc-l">
     <div>
       <img src="/img/neologo_header.png" class="tc tc-l" alt=""></img>
