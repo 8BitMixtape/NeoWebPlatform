@@ -30,12 +30,14 @@
 
   <div class="fl w-100  w-100-m  w-60-l db tc tl-ns ph3">
     <h1 class="f3 f1-l fw2 mb3 mt4 mt0-ns black fontbit lh-copy hot-pink">Features:</h1>
-    <h2 class="f5 f4-m f4-l fw1 mb4 mb5-l lh-title black-80 tl">The key feature of the new 8Bit Mixtape is the easiness of uploading new codes using an audio communication protocol,
+    <p class="f5 f4-m f4-l fw1 mb4 mb2-l lh-title black-80 tl fontpress">The key feature of the new 8Bit Mixtape is the easiness of uploading new codes using an audio communication protocol,
       means just playing a .wav sound file from your computer/smart phone (or walkman). A specific bootloader (TinyAudioBoot)
       has to be installed on the chip to be able to do so. The bootloader is the first program that is started when you turn
-      on your mixtape. you should see the right led blinking slowly. The bootloader is in waiting programmable mode for 5
+      on your mixtape. you should see the right led blinking slowly.</p> 
+      
+      <p class="f5 f4-m f4-l fw1 mb4 mb2-l lh-title black-80 tl fontpress">The bootloader is in waiting programmable mode for 5
       seconds, and then starts the main program. If your board, doesnt blink for 5 seconds, maybe the bootloader has disappeared,
-      see below for instructions on how to flash the bootloader (using ISP-programming).</h2>
+      see below for instructions on how to flash the bootloader (using ISP-programming).</p>
     <a href="https://www.amazon.com/Apple-iPhone-Warranty-Unlocked-Cellphone/dp/B015E8UTIU/ref=sr_1_2?ie=UTF8&qid=1481330742&sr=8-2&keywords=iphone+6s"
       class="dib grow"></a>
   </div>
@@ -43,13 +45,13 @@
 </section>
 
 <div class="pa4">
-  <h1 class="f4 bold center black mb4 fontbit center tl-ns f2-ns black lh-copy lh-copy-m lh-title-ns">DOWNLOAD MIXTAPE</h1>
+  <h1 class="f4 bold center black mb4 fontbit center tl-ns f2-ns black lh-copy lh-copy-m lh-title-ns tc">DOWNLOAD MIXTAPE</h1>
   <div class="overflow-auto">
-    <table class="f6 w-100 center fontbit tracked-mega bg-green white" cellspacing="0">
+    <table class="f6 w-100 center fontpress bg-green white" cellspacing="0">
       <thead>
         <tr class="white bg-black ">
           <th class="fw6 tl pa3 ">NAME</th>
-          <th class="fw6 tl pa3 ">DESCRITION</th>
+          <th class="fw6 tl pa3 ">DESCRIPTION</th>
           <th class="fw6 tl pa3 ">USER</th>
           <th class="fw6 tl pa3 ">DOWNLOAD</th>
         </tr>

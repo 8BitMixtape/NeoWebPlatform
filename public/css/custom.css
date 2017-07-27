@@ -42,6 +42,7 @@
 	font-style: normal;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
 .fontsubo {
     font-family: 'CMOD Subotron';
@@ -59,6 +60,9 @@
     font-family: 'Comic Jens Free Pro';
 }
 
+.fontpress {
+    font-family: 'Press Start 2P', monospace;
+}
 
 .coco-workshop-pattern {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAGklEQVQIHWNkYGCQBGKcAKckE04tQImBkAQAKQUAPhxBIc4AAAAASUVORK5CYII=
