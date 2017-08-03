@@ -157,5 +157,82 @@ class DatabaseSeeder extends Seeder
             'post_id' => 1]
 
         ]);
+
+      DB::table('mixtapes')->insert([
+
+            [
+            'name' => 'testComponents-Advanced',
+            'description' => 'Test all the components of your hardware',
+            'variant' => '8BitMixtapeNEO',
+            'hex' => '',
+            'url' => '',
+            'user_id' => '1',
+            ],
+
+            [
+            'name' => '05092008_ChrisMicro_TraschMetalResearchGroup',
+            'description' => 'A claasiic by ChrisMicro',
+            'variant' => '8BitMixtapeNEO',
+            'hex' => '',
+            'url' => '',
+            'user_id' => '1',
+            ],
+
+            [
+            'name' => 'NEO_8Pixel_oneliners',
+            'description' => 'Algorithmic sounds, inspired by Viznut. Updated the classic OneLiners to the 8Bit Mixtape NEO, turn on/off visuals.',
+            'variant' => '8BitMixtapeNEO',
+            'hex' => '',
+            'url' => '',
+            'user_id' => '1',
+            ],
+
+            [
+            'name' => 'Attiny SoundPitix-VCO NEO',
+            'description' => 'A simple VCO, slightly outdated software syhnth, but cool with visuals now. Board needs to be restarted again after upload to work properly.',
+            'variant' => '8BitMixtapeNEO',
+            'hex' => '',
+            'url' => '',
+            'user_id' => '1',
+            ],
+
+            [
+            'name' => 'IrqPcControlSynth 054',
+            'description' => 'PC controlled synthesizer with two LFO and one HFO To control the synth you need this java application. Download Main_IrqPcControllerForSynth.jar',
+            'variant' => '8BitMixtapeNEO',
+            'hex' => '',
+            'url' => '',
+            'user_id' => '1',
+            ],
+
+            [
+            'name' => 'Family Mart Chime',
+            'description' => 'Because we can... Greetings from Taipei!',
+            'variant' => '8BitMixtapeNEO',
+            'hex' => '',
+            'url' => '',
+            'user_id' => '1',
+            ],            
+              
+            [
+            'name' => 'One Pixel Board',
+            'description' => 'Ada_1Pixel_oneliners',
+            'variant' => '8BitMixtapeNEO',
+            'hex' => '',
+            'url' => '',
+            'user_id' => '1',
+            ],
+            
+            [
+            'name' => 'Gär Lämpli - ギャランプリー - 起酵燈仔',
+            'description' => 'Gär Lämpli - ギャランプリー',
+            'variant' => '8BitMixtapeNEO',
+            'hex' => '',
+            'url' => '',
+            'user_id' => '1',
+            ]
+
+        ]);
+
     }
 }
