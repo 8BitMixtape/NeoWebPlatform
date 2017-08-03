@@ -9,6 +9,8 @@ use App\Notifications\ConfirmEmail as ConfirmEmailNotification;
 use App\Models\Role;
 use App\Models\Post;
 use App\Models\Comment;
+use App\Models\Mixtape;
+
 use Storage;
 
 class User extends Authenticatable
@@ -40,6 +42,16 @@ class User extends Authenticatable
     public function posts()
     {
         return $this->hasMany(Post::class);
+    }
+
+    /**
+     * One to Many relation
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\hasMany
+     */
+    public function mixtapes()
+    {
+        return $this->hasMany(Mixtape::class);
     }
 
     /**
