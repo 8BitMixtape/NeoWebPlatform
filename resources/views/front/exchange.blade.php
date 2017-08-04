@@ -1,7 +1,5 @@
 @extends('front.template_neo') 
-
 @section("main")
-
 <div class="pa4">
   <h1 class="f4 bold center black mb4 fontbit center tl-ns f2-ns black lh-copy lh-copy-m lh-title-ns tc">DOWNLOAD MIXTAPE</h1>
   <div class="overflow-auto">
@@ -15,57 +13,82 @@
         </tr>
       </thead>
       <tbody class="lh-copy">
+        @foreach($mixtapes as $item)
         <tr class="stripe-dark">
-          <td class="pa3">testComponents-Advanced</td>
-          <td class="pa3">Test all the components of your hardware</td>
-          <td class="pa3">8BitMixtapeNEO</td>
-          <td class="pa3"> <button value="">download</button> </td>
+          <td class="pa3">{{ $item->name }}</td>
+          <td class="pa3">{{ $item->description }}</td>
+          <td class="pa3">{{ $item->variant }}</td>
+          <td class="pa3"> <button onclick="window.uploadHexBtn(this)" value="{{ $item->id }}">download</button> </td>
         </tr>
-        <tr class="stripe-dark">
-          <td class="pa3">05092008_ChrisMicro_TraschMetalResearchGroup</td>
-          <td class="pa3">A claasiic by ChrisMicro</td>
-          <td class="pa3">8BitMixtapeNEO</td>
-          <td class="pa3"><button value="">download</button></td>
-        </tr>
-        <tr class="stripe-dark">
-          <td class="pa3">NEO_8Pixel_oneliners</td>
-          <td class="pa3">Algorithmic sounds, inspired by Viznut. Updated the classic OneLiners to the 8Bit Mixtape NEO, turn on/off visuals.</td>
-          <td class="pa3">8BitMixtapeNEO</td>
-          <td class="pa3"><button value="">download</button></td>
-        </tr>
-        <tr class="stripe-dark">
-          <td class="pa3">Attiny SoundPitix-VCO NEO</td>
-          <td class="pa3">A simple VCO, slightly outdated software syhnth, but cool with visuals now. Board needs to be restarted again after upload to work properly.</td>
-          <td class="pa3">8BitMixtapeNEO</td>
-          <td class="pa3"><button value="">download</button></td>
-        </tr>
-        <tr class="stripe-dark">
-          <td class="pa3">IrqPcControlSynth 054</td>
-          <td class="pa3">PC controlled synthesizer with two LFO and one HFO To control the synth you need this java application. Download Main_IrqPcControllerForSynth.jar</td>
-          <td class="pa3">8BitMixtapeNEO</td>
-          <td class="pa3"><button value="">download</button></td>
-        </tr>
-        <tr class="stripe-dark">
-          <td class="pa3">Family Mart Chime</td>
-          <td class="pa3">Because we can... Greetings from Taipei!</td>
-          <td class="pa3">8BitMixtapeNEO</td>
-          <td class="pa3"><button value="">download</button></td>
-        </tr>
-        <tr class="stripe-dark">
-          <td class="pa3">One Pixel Board</td>
-          <td class="pa3">Ada_1Pixel_oneliners</td>
-          <td class="pa3">8BitMixtapeNEO</td>
-          <td class="pa3"><button value="">download</button></td>
-        </tr>
-        <tr class="stripe-dark">
-          <td class="pa3">Gär Lämpli - ギャランプリー - 起酵燈仔</td>
-          <td class="pa3">Gär Lämpli - ギャランプリー</td>
-          <td class="pa3">8BitMixtapeNEO</td>
-          <td class="pa3"><button value="">download</button></td>
-        </tr>                        
+        @endforeach
       </tbody>
     </table>
   </div>
 </div>
-
 @endsection
+
+
+@section("scripts")
+<script>
+$(function () {
+
+      hexUploading = false;
+      hex2wav = new Hex2wav();
+
+      var hex_cache = {};
+
+      var uploadHex = function(hex_string)
+      {
+        var decoded_hex_array = hex2wav.decodeHexFile(hex_string);
+        var signal = hex2wav.generateProgrammingSignal(decoded_hex_array);
+        hex2wav.playSignal(hex2wav.audioCtx, signal);
+      }
+
+      var getAndUploadHex = function(hex_id, dom)
+      {
+            var normal_txt = "download";
+            var getting_txt = "getting hex..";
+            hexUploading = true;
+            dom.innerHTML = getting_txt;
+            
+            //check if cached
+            if (hex_cache[hex_id]){
+              console.log('cached');
+              uploadHex(hex_cache[hex_id]);
+              hexUploading = false;
+              dom.innerHTML = normal_txt;
+              return;
+            }
+
+            $.ajax({
+                url: '/exchange/hex/' + hex_id,
+                type: 'GET'
+            })
+            .done(function(data) {
+              hex_cache[hex_id] = data;
+              uploadHex(data);
+              hexUploading = false;
+              dom.innerHTML = normal_txt;
+            })
+            .fail(function() {
+              hexUploading = false;
+              dom.innerHTML = normal_txt;              
+            });
+      }
+
+      //global
+      window.uploadHexBtn = function(event)
+      {
+        var hex_id = (event.getAttribute('value'));
+        if (!hexUploading) {
+          getAndUploadHex(hex_id, event);
+        }else{
+          console.log("already uploading");
+        }
+      }
+
+});
+</script>
+@endsection
+
+

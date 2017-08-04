@@ -15,12 +15,12 @@ class CreateMixtapesTable extends Migration
     {
         //
         Schema::create('mixtapes', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->increments('id');
             $table->string('name');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('variant');            
-            $table->text('hex');
-            $table->string('url');
+            $table->text('hex')->nullable();
+            $table->string('url')->nullable();
             $table->integer('user_id')->unsigned();              
             $table->timestamps();
         });        

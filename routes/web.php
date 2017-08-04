@@ -3,8 +3,6 @@
 // Home
 Route::get('/', 'HomeController')->name('home');
 
-Route::get('/exchange', 'ExchangeController')->name('exchange');
-
 // Language
 Route::get('language/{lang}', 'LanguageController')
     ->where('lang', implode('|', config('app.languages')));
@@ -56,3 +54,7 @@ Route::get('confirm/{token}', 'Auth\RegisterController@confirm');
 // Notifications
 Route::get('notifications/{user}', 'NotificationController@index');
 Route::put('notifications/{notification}', 'NotificationController@update');
+
+// Exchange
+Route::get('exchange','ExchangeController@index');
+Route::get('exchange/hex/{id}','ExchangeController@gethex');
