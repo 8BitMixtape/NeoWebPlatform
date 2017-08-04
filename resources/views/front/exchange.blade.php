@@ -18,19 +18,12 @@
           <td class="pa3">{{ $item->name }}</td>
           <td class="pa3">{{ $item->description }}</td>
           <td class="pa3">{{ $item->variant }}</td>
-          <td class="pa3"> <button onclick="window.downloadHex(this)" value="{{ $item->id }}">download</button> </td>
+          <td class="pa3"> <button onclick="window.downloadHex(this)" value="{{ $item->id }}" programName="{{ $item->name }}">download</button> </td>
         </tr>
         @endforeach
       </tbody>
     </table>
   </div>
-</div>
-
-
-<div id="uploadPrompt" style="display: none;">
-<h1 class="fontbit">Upload</h1>
-<p>connect 8bitmixtapeneo, power it on, then click play hex</p>
-  <input type="submit" value="Play HEX" onclick="event.preventDefault();" class="input-reset w-100  bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray">
 </div>
 
 @endsection
@@ -53,6 +46,7 @@ $(function () {
       window.downloadHex = function(dom)
       {
           var hex_id = dom.getAttribute('value');
+          var hex_name = dom.getAttribute('programName');
 
           var normal_txt = "download";
           var getting_txt = "downloading hex..";
@@ -65,8 +59,9 @@ $(function () {
               type: 'GET'
           })
           .done(function(data) {
+            //console.log(data);
             hex_cache[hex_id] = data;
-            window.openModal(hex_id);
+            window.openModal(hex_id, hex_name);
             dom.innerHTML = normal_txt;
             
           })
@@ -76,11 +71,11 @@ $(function () {
 
       }
 
-      window.openModal = function (hex_id)
+      window.openModal = function (hex_id, hex_name)
       {
           vex.dialog.open({
             buttons: [],
-            unsafeMessage: '<div class="pa2"><h1 class="fontbit">Upload HEX</h1> <p>Connect 8BitMixtapeNEO, power it on, then click UPLOAD</p></div>',
+            unsafeMessage: '<div class="pa2"><h1 class="mb4 red fontbit">Upload HEX</h1> <p>program name: <b>' + hex_name + '</b></p> <p>Connect 8BitMixtapeNEO, power it on, while its blinking, click UPLOAD</p></div>',
             input: ' <button type="submit" onclick="window.uploadHexBtn(this, event);" value="' + hex_id + '" class="input-reset w-100  bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray">UPLOAD</button>'
         });
       }
@@ -88,7 +83,8 @@ $(function () {
       //global
       window.uploadHexBtn = function(event, dom)
       {
-        var hex_id = (event.getAttribute('value'));      
+        var hex_id = (event.getAttribute('value')); 
+        console.log(hex_cache[hex_id]);     
         uploadHex(hex_cache[hex_id]);
         dom.preventDefault();
       }
