@@ -15,7 +15,7 @@
       <tbody class="lh-copy">
         @foreach($mixtapes as $item)
         <tr class="stripe-dark">
-          <td class="pa3">{{ $item->name }}</td>
+          <td class="pa3 b">{{ $item->name }}</td>
           <td class="pa3">{{ $item->description }}</td>
           <td class="pa3">{{ $item->variant }}</td>
           <td class="pa3"> <button class="input-reset w-100 tracked-mega bg-black-70 b--black-10 white f6 pv2 pv2-ns ph4 ba b--black-80 bg-hover-mid-gray fontbit" onclick="window.downloadHex(this)" value="{{ $item->id }}" programName="{{ $item->name }}">Download</button> </td>
