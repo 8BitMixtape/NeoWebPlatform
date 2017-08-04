@@ -104,10 +104,15 @@
   </footer>
 
 
-
-
   {!! HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js') !!} 
   {!! HTML::script('/js/hex2wav.js') !!} 
+
+  {!! HTML::script('/js/vex.combined.min.js') !!} 
+  {!! HTML::style('/css/vex.css') !!} 
+  {!! HTML::style('/css/vex-theme-wireframe.css') !!} 
+  <script>vex.defaultOptions.className = 'vex-theme-wireframe'</script>
+
+
 
   <script>
     $.ajaxSetup({
