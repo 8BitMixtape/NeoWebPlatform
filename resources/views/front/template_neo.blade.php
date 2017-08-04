@@ -109,8 +109,8 @@
 
   {!! HTML::script('/js/vex.combined.min.js') !!} 
   {!! HTML::style('/css/vex.css') !!} 
-  {!! HTML::style('/css/vex-theme-wireframe.css') !!} 
-  <script>vex.defaultOptions.className = 'vex-theme-wireframe'</script>
+  {!! HTML::style('/css/vex-theme-plain.css') !!} 
+  <script>vex.defaultOptions.className = 'vex-theme-plain'</script>
 
 
 

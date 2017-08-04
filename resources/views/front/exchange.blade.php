@@ -18,7 +18,7 @@
           <td class="pa3">{{ $item->name }}</td>
           <td class="pa3">{{ $item->description }}</td>
           <td class="pa3">{{ $item->variant }}</td>
-          <td class="pa3"> <button onclick="window.downloadHex(this)" value="{{ $item->id }}" programName="{{ $item->name }}">download</button> </td>
+          <td class="pa3"> <button class="input-reset w-100 tracked-mega bg-orange b--black-10 white f6 pv2 pv2-ns ph4 ba b--black-80 bg-hover-mid-gray fontbit" onclick="window.downloadHex(this)" value="{{ $item->id }}" programName="{{ $item->name }}">Download</button> </td>
         </tr>
         @endforeach
       </tbody>
@@ -48,7 +48,7 @@ $(function () {
           var hex_id = dom.getAttribute('value');
           var hex_name = dom.getAttribute('programName');
 
-          var normal_txt = "download";
+          var normal_txt = "Download";
           var getting_txt = "downloading hex..";
           var failed_txt = "retry..";
 
@@ -75,8 +75,8 @@ $(function () {
       {
           vex.dialog.open({
             buttons: [],
-            unsafeMessage: '<div class="pa2"><h1 class="mb4 red fontbit">Upload HEX</h1> <p>program name: <b>' + hex_name + '</b></p> <p> <ul><li>Connect 8BitMixtapeNEO <b>Audio Programming</b> to <b>CPU speaker out</b></li> <li>Power it on</li>  <li>While its blinking, click UPLOAD</li></ul></p></div>',
-            input: ' <button type="submit" onclick="window.uploadHexBtn(this, event);" value="' + hex_id + '" class="input-reset w-100  bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray">UPLOAD</button>'
+            unsafeMessage: '<div class="pa4 black fontpress"><h1 class="fontbit">Upload HEX</h1> <p>program name: <b>' + hex_name + '</b></p> <p> <ul class="ma0 pl3"><li>Connect 8BitMixtapeNEO <b>Audio Programming</b> to <b>CPU speaker out</b></li> <li>Power it on</li>  <li>While its blinking, click UPLOAD</li></ul></p></div>',
+            input: ' <button type="submit" onclick="window.uploadHexBtn(this, event);" value="' + hex_id + '" class="bg-purple input-reset w-100  bg-orange b--black-10 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray tracked-mega fontbit">UPLOAD</button>'
         });
       }
 
