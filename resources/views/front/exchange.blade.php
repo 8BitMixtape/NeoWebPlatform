@@ -75,7 +75,7 @@ $(function () {
       {
           vex.dialog.open({
             buttons: [],
-            unsafeMessage: '<div class="pa4 black fontpress"><h1 class="fontbit">Upload HEX</h1> <p>program name: <b>' + hex_name + '</b></p> <p> <ul class="ma0 pl3"><li>Connect 8BitMixtapeNEO <b>Audio Programming</b> to <b>CPU speaker out</b></li> <li>Power it on</li>  <li>While its blinking, click UPLOAD</li></ul></p></div>',
+            unsafeMessage: '<div class="pa4 black fontpress"><h1 class="fontbit">Upload HEX</h1> <p>Program name: <b>' + hex_name + '</b></p> <p> <ul class="ma0 pl3"><li>Connect 8BitMixtapeNEO <b>Audio Programming</b> to <b>CPU speaker out</b></li> <li>Power it on</li>  <li>While its blinking, click UPLOAD</li></ul></p></div>',
             input: ' <button type="submit" onclick="window.uploadHexBtn(this, event);" value="' + hex_id + '" class="bg-purple input-reset w-100  bg-orange b--black-10 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray tracked-mega fontbit">UPLOAD</button>'
         });
       }
