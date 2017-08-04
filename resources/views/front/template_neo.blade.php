@@ -86,7 +86,7 @@
           Sign up for our newsletter.
         </p>
         <input placeholder="Email Address" class="mw-100 w-100 w5-ns f5 input-reset ba b--black-20 pv3 ph4 border-box">
-        <input type="submit" class="input-reset w-100 w-auto-ns bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray">
+        <input type="submit" value="Subscribe"  class="input-reset w-100 w-auto-ns bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray">
       </div>
     </section>
     <div class="dt dt--fixed w-100">
@@ -106,8 +106,8 @@
 
 
 
-  {!! HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js') !!} {!! HTML::script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-  !!}
+  {!! HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js') !!} 
+  {!! HTML::script('/js/hex2wav.js') !!} 
 
   <script>
     $.ajaxSetup({
@@ -116,10 +116,12 @@
       }
     });
     $(function () {
+
       $('#logout').click(function (e) {
         e.preventDefault();
         $('#logout-form').submit();
       })
+      
     });
   </script>
 
