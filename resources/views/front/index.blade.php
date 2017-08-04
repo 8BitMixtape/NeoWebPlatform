@@ -24,22 +24,16 @@
 
 @section('main')
 <section class="cf pa5-ns items-center  bg-white ">
-  <div class="fl w-100 w-100-m mt4 mt2-ns mb5-m w-40-l tc">
-    <img class="" src="https://8bitmixtape.github.io/NeoWiki/images/boards/Pins_NEO-Coconut_v03.jpg">
+  <div class="fl w-100 w-100-m mt4 mt2-ns mb5-m w-70-l tc">
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/NthrxNBOH2c" frameborder="0" allowfullscreen></iframe>
   </div>
 
-  <div class="fl w-100  w-100-m  w-60-l db tc tl-ns ph3">
+  <div class="fl w-100  w-100-m  w-30-l db tc tl-ns ph3">
     <h1 class="f3 f1-l fw2 mb3 mt4 mt0-ns black fontbit lh-copy hot-pink">Features:</h1>
     <p class="f5 f4-m f4-l fw1 mb4 mb2-l lh-title black-80 tl fontpress">The key feature of the new 8Bit Mixtape is the easiness of uploading new codes using an audio communication protocol,
       means just playing a .wav sound file from your computer/smart phone (or walkman). A specific bootloader (TinyAudioBoot)
       has to be installed on the chip to be able to do so. The bootloader is the first program that is started when you turn
       on your mixtape. you should see the right led blinking slowly.</p> 
-      
-      <p class="f5 f4-m f4-l fw1 mb4 mb2-l lh-title black-80 tl fontpress">The bootloader is in waiting programmable mode for 5
-      seconds, and then starts the main program. If your board, doesnt blink for 5 seconds, maybe the bootloader has disappeared,
-      see below for instructions on how to flash the bootloader (using ISP-programming).</p>
-    <a href="https://www.amazon.com/Apple-iPhone-Warranty-Unlocked-Cellphone/dp/B015E8UTIU/ref=sr_1_2?ie=UTF8&qid=1481330742&sr=8-2&keywords=iphone+6s"
-      class="dib grow"></a>
   </div>
 
 </section>
