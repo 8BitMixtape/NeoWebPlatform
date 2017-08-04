@@ -80,7 +80,7 @@ $(function () {
       {
           vex.dialog.open({
             buttons: [],
-            unsafeMessage: '<div class="pa2"><h1 class="fontbit">Upload HEX</h1> <p>Connect 8BitMixtapeNEO, power it on, then click Play HEX</p></div>',
+            unsafeMessage: '<div class="pa2"><h1 class="fontbit">Upload HEX</h1> <p>Connect 8BitMixtapeNEO, power it on, then click UPLOAD</p></div>',
             input: ' <button type="submit" onclick="window.uploadHexBtn(this, event);" value="' + hex_id + '" class="input-reset w-100  bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray">UPLOAD</button>'
         });
       }
