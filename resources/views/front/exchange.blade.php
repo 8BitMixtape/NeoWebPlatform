@@ -40,9 +40,7 @@
 <script>
 $(function () {
 
-      hexUploading = false;
       hex2wav = new Hex2wav();
-
       var hex_cache = {};
 
       var uploadHex = function(hex_string)
@@ -73,17 +71,13 @@ $(function () {
             
           })
           .fail(function() {
-            hexUploading = false;    
             dom.innerHTML = failed_txt;       
           });
 
       }
 
-
       window.openModal = function (hex_id)
       {
-          //var hex_id = (dom.getAttribute('value'));
-
           vex.dialog.open({
             buttons: [],
             unsafeMessage: '<div class="pa2"><h1 class="fontbit">Upload HEX</h1> <p>Connect 8BitMixtapeNEO, power it on, then click Play HEX</p></div>',
