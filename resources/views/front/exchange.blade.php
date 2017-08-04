@@ -18,13 +18,21 @@
           <td class="pa3">{{ $item->name }}</td>
           <td class="pa3">{{ $item->description }}</td>
           <td class="pa3">{{ $item->variant }}</td>
-          <td class="pa3"> <button onclick="window.uploadHexBtn(this)" value="{{ $item->id }}">download</button> </td>
+          <td class="pa3"> <button onclick="window.downloadHex(this)" value="{{ $item->id }}">download</button> </td>
         </tr>
         @endforeach
       </tbody>
     </table>
   </div>
 </div>
+
+
+<div id="uploadPrompt" style="display: none;">
+<h1 class="fontbit">Upload</h1>
+<p>connect 8bitmixtapeneo, power it on, then click play hex</p>
+  <input type="submit" value="Play HEX" onclick="event.preventDefault();" class="input-reset w-100  bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray">
+</div>
+
 @endsection
 
 
@@ -44,47 +52,51 @@ $(function () {
         hex2wav.playSignal(hex2wav.audioCtx, signal);
       }
 
-      var getAndUploadHex = function(hex_id, dom)
+      window.downloadHex = function(dom)
       {
-            var normal_txt = "download";
-            var getting_txt = "getting hex..";
-            hexUploading = true;
-            dom.innerHTML = getting_txt;
-            
-            //check if cached
-            if (hex_cache[hex_id]){
-              console.log('cached');
-              uploadHex(hex_cache[hex_id]);
-              hexUploading = false;
-              dom.innerHTML = normal_txt;
-              return;
-            }
+          var hex_id = dom.getAttribute('value');
 
-            $.ajax({
-                url: '/exchange/hex/' + hex_id,
-                type: 'GET'
-            })
-            .done(function(data) {
-              hex_cache[hex_id] = data;
-              uploadHex(data);
-              hexUploading = false;
-              dom.innerHTML = normal_txt;
-            })
-            .fail(function() {
-              hexUploading = false;
-              dom.innerHTML = normal_txt;              
-            });
+          var normal_txt = "download";
+          var getting_txt = "downloading hex..";
+          var failed_txt = "retry..";
+
+          dom.innerHTML = getting_txt;
+
+          $.ajax({
+              url: '/exchange/hex/' + hex_id,
+              type: 'GET'
+          })
+          .done(function(data) {
+            hex_cache[hex_id] = data;
+            window.openModal(hex_id);
+            dom.innerHTML = normal_txt;
+            
+          })
+          .fail(function() {
+            hexUploading = false;    
+            dom.innerHTML = failed_txt;       
+          });
+
+      }
+
+
+      window.openModal = function (hex_id)
+      {
+          //var hex_id = (dom.getAttribute('value'));
+
+          vex.dialog.open({
+            buttons: [],
+            unsafeMessage: '<div class="pa2"><h1 class="fontbit">Upload HEX</h1> <p>Connect 8BitMixtapeNEO, power it on, then click Play HEX</p></div>',
+            input: ' <button type="submit" onclick="window.uploadHexBtn(this, event);" value="' + hex_id + '" class="input-reset w-100  bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray">UPLOAD</button>'
+        });
       }
 
       //global
-      window.uploadHexBtn = function(event)
+      window.uploadHexBtn = function(event, dom)
       {
-        var hex_id = (event.getAttribute('value'));
-        if (!hexUploading) {
-          getAndUploadHex(hex_id, event);
-        }else{
-          console.log("already uploading");
-        }
+        var hex_id = (event.getAttribute('value'));      
+        uploadHex(hex_cache[hex_id]);
+        dom.preventDefault();
       }
 
 });
