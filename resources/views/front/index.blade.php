@@ -24,11 +24,11 @@
 
 @section('main')
 <section class="cf pa5-ns items-center  bg-white ">
-  <div class="fl w-100 w-100-m mt4 mt2-ns mb5-m w-70-l tc">
-    <iframe width="854" height="480" src="https://www.youtube.com/embed/NthrxNBOH2c" frameborder="0" allowfullscreen></iframe>
+  <div class="fl w-100 w-100-m mt4 mt2-ns mb5-m w-60-l tc pa2">
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/NthrxNBOH2c' frameborder='0' allowfullscreen></iframe></div>
   </div>
 
-  <div class="fl w-100  w-100-m  w-30-l db tc tl-ns ph3">
+  <div class="fl w-100  w-100-m  w-40-l db tc tl-ns ph3">
     <h1 class="f3 f1-l fw2 mb3 mt4 mt0-ns black fontbit lh-copy hot-pink">Features:</h1>
     <p class="f5 f4-m f4-l fw1 mb4 mb2-l lh-title black-80 tl fontpress">The key feature of the new 8Bit Mixtape is the easiness of uploading new codes using an audio communication protocol,
       means just playing a .wav sound file from your computer/smart phone (or walkman). A specific bootloader (TinyAudioBoot)
