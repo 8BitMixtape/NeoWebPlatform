@@ -36,21 +36,22 @@ class MixtapeRepository extends BaseRepository
     /**
      * Create or update a post.
      *
-     * @param  \App\Models\Post $post
+     * @param  \App\Models\Mixtape $post
      * @param  array  $inputs
      * @param  integer  $user_id
      * @return \App\Models\Post
      */
     protected function saveMixtape($post, $inputs, $user_id = null)
     {
-        $post->title = $inputs['title'];
-        $post->summary = $inputs['summary'];
-        $post->content = $inputs['content'];
-        $post->slug = $inputs['slug'];
-        $post->active = isset($inputs['active']);
+        $post->name = $inputs['name'];
+        $post->description = $inputs['description'];
+        $post->variant = $inputs['variant'];
+        $post->hex = $inputs['hex'];
+        $post->url = $inputs['url'];
+        
         if ($user_id) {
             $post->user_id = $user_id;
-        }
+        }        
         $post->save();
 
         return $post;
@@ -64,7 +65,7 @@ class MixtapeRepository extends BaseRepository
     protected function queryActiveWithUserOrderByDate()
     {
         return $this->model
-            ->select('id', 'created_at', 'updated_at', 'name', 'description', 'variant', 'hex', 'url')
+            ->select('id', 'created_at', 'updated_at','user_id', 'name', 'description', 'variant', 'hex', 'url')
             ->with('user')
             ->latest();
     }
@@ -121,13 +122,13 @@ class MixtapeRepository extends BaseRepository
      * @param  string  $direction
      * @return Illuminate\Support\Collection
      */
-    public function getMixtapesWithOrder($n, $user_id = null, $orderby = 'created_at', $direction = 'desc')
+    public function getMixtapesWithOrder($n, $user_id = null, $orderby = 'mixtapes.created_at', $direction = 'desc')
     {
         $query = $this->model
-            ->select('mixtapes.id', 'mixtapes.created_at', 'mixtapes.updated_at', 'mixtapes.name', 'mixtapes.description', 'mixtapes.variant', 'mixtapes.hex', 'mixtapes.url')
+            ->select('mixtapes.id', 'mixtapes.created_at','mixtapes.user_id', 'mixtapes.updated_at', 'mixtapes.name', 'mixtapes.description', 'mixtapes.variant', 'mixtapes.hex', 'mixtapes.url')
             ->join('users', 'users.id', '=', 'mixtapes.user_id')
             ->orderBy($orderby, $direction);
-
+        
         if ($user_id) {
             $query->where('user_id', $user_id);
         }
@@ -224,23 +225,7 @@ class MixtapeRepository extends BaseRepository
      */
     public function store($inputs, $user_id)
     {
-        $post = $this->savePost(new $this->model, $inputs, $user_id);
-
-        // Tags gestion
-        if (array_key_exists('tags', $inputs) && $inputs['tags'] != '') {
-            $tags = explode(',', $inputs['tags']);
-
-            foreach ($tags as $tag) {
-                $tag_ref = $this->tag->whereTag($tag)->first();
-                if (is_null($tag_ref)) {
-                    $tag_ref = new $this->tag;
-                    $tag_ref->tag = $tag;
-                    $post->tags()->save($tag_ref);
-                } else {
-                    $post->tags()->attach($tag_ref->id);
-                }
-            }
-        }
+        $post = $this->saveMixtape(new $this->model, $inputs, $user_id);
 
         // Maybe purge orphan tags...
     }
