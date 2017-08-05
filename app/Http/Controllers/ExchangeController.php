@@ -6,6 +6,7 @@ use App\Repositories\MixtapeRepository;
 use App\Http\Middleware\IsAjax;
 use App\Http\Requests\MixtapeCreateRequest;
 
+use Illuminate\Support\Facades\Auth;
 
 class ExchangeController extends Controller
 {
@@ -25,8 +26,6 @@ class ExchangeController extends Controller
     public function __construct(MixtapeRepository $mixtape)
     {
         $this->mixtapeRepository = $mixtape;
-        //$this->middleware('ajax')->only('gethex');
-
     }
 
     /**
@@ -45,7 +44,17 @@ class ExchangeController extends Controller
         return $this->mixtapeRepository->getById($id)->hex;
     }
 
-    public function upload()
+    public function list()
+    {
+        $id = Auth::id();
+        $mixtapes = $this->mixtapeRepository->getActiveWithUserOrderByDate(10);
+
+        // print_r($mixtapes);
+        return view('exchange.index', compact('mixtapes'));
+    }
+
+
+    public function create()
     {
         return view('exchange.upload');
     }
@@ -64,9 +73,8 @@ class ExchangeController extends Controller
      */
     public function store(MixtapeCreateRequest $request)
     {
-        print_r($request->all());
-        // $this->blogRepository->store($request->all(), $request->user()->id);
-        // return redirect('blog')->with('ok', trans('back/blog.stored'));
+        $this->mixtapeRepository->store($request->all(), $request->user()->id);
+        return redirect('/exchange');
     }
 
 
