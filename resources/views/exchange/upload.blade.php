@@ -9,7 +9,7 @@
 @section("main")
 <div class="pa4">
   <h1 class="f4 bold center black mb4 fontbit center  tl-ns f2-ns black lh-copy lh-copy-m lh-title-ns tc">UPLOAD MIXTAPE</h1>
-  {!! Form::open(['url' => 'exchange','enctype' => 'multipart/form-data', 'method' => 'post', 'class' => 'black-80']) !!}
+  {!! Form::open(['url' => 'member','enctype' => 'multipart/form-data', 'method' => 'post', 'class' => 'black-80']) !!}
     <fieldset id="" class="ba b--transparent ph0 mh0">
       {!! Form::controlTachyons('input','name', 'Program', $errors, (isset($name)) ? $name : "" , "What is your program name?", "(required)" ) !!}
       {!! Form::controlTachyons('input','variant', 'Variant', $errors, "" , "What is the board variant?", "(required)" ) !!}

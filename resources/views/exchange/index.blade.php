@@ -16,6 +16,7 @@
           <th class="fw6 tl pa3 ">NAME</th>
           <th class="fw6 tl pa3 ">DESCRIPTION</th>
           <th class="fw6 tl pa3 ">VARIANT</th>
+          <th class="fw6 tl pa3 ">USER</th>          
           <th class="fw6 tl pa3 ">DOWNLOAD</th>
         </tr>
       </thead>
@@ -25,6 +26,7 @@
           <td class="pa3 b">{{ $item->name }}</td>
           <td class="pa3">{{ $item->description }}</td>
           <td class="pa3">{{ $item->variant }}</td>
+          <td class="pa3">{{ $item->user->username }}</td>          
           <td class="pa3"> <button class="input-reset hover-bg-black w-100 tracked-mega bg-black-70 b--black-10 white f6 pv2 pv2-ns ph4 ba b--black-80 bg-hover-mid-gray fontbit" onclick="window.downloadHex(this)" value="{{ $item->id }}" programName="{{ $item->name }}">Download</button> </td>
         </tr>
         @endforeach
