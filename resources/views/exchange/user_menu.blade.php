@@ -7,7 +7,7 @@
           UPLOAD MIXTAPE
         </span>
       </a>
-    <a class="ba black-70 no-underline hover-bg-black hover-white fontpress br2 b inline-flex items-center mr3 pv2 ph3" href="/exchange"
+    <a class="ba black-70 no-underline hover-bg-black hover-white fontpress br2 b inline-flex items-center mr3 pv2 ph3" href="/exchange/list"
       title="Join our Slack Channel">
         <span>
           MY MIXTAPE
@@ -19,7 +19,7 @@
           EDIT PROFILE
         </span>
       </a>
-    <a class="ba black-70 no-underline hover-bg-black hover-white fontpress br2 b inline-flex items-center mr3 pv2 ph3" href="#"
+    <a class="ba black-70 no-underline hover-bg-black hover-white fontpress br2 b inline-flex items-center mr3 pv2 ph3" href="/logout"
       title="Join our Slack Channel">
         <span>
           LOGOUT
