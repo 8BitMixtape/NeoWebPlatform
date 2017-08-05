@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => 'hello@example.com',
-        'name' => 'Administrator',
+        'address' => 'hello@neo.manticore.id',
+        'name' => '8BitMixtape Community',
     ],
 
     /*
