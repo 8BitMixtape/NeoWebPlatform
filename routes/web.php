@@ -61,3 +61,4 @@ Route::get('exchange/hex/{id}','ExchangeController@gethex');
 Route::get('exchange/detail/{id}','ExchangeController@detail');
 Route::get('exchange/upload','ExchangeController@upload');
 Route::get('exchange/editprofile','ExchangeController@editprofile');
+Route::resource('exchange', 'ExchangeController', ['except' => 'show']);
