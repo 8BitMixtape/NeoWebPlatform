@@ -54,7 +54,8 @@ class FormBuilder
             'errors',
             'value' => null,
             'helper' => null,
-            'required' => '(required)'
+            'required' => '(required)',
+            'class' => 'mb4'
         ]);
     }
 }
