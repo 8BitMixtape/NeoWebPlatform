@@ -51,3 +51,4 @@ database/database.sqlite
 public/files/.quarantine/
 public/files/.tmb/*
 .env
+public/files/user2/.tmb/*
