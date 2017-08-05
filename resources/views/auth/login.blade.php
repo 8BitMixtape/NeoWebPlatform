@@ -3,6 +3,10 @@
 @section('main')
 <main class="pa4 black-80">
 
+
+  <h1 class="f4 bold center black mb4 fontbit center tl-ns f2-ns black lh-copy lh-copy-m lh-title-ns tc">Login</h1>
+
+
 @if(session()->has('error'))
     @include('partials/error', ['type' => 'danger', 'message' => session('error')])
 @endif	
@@ -12,15 +16,9 @@
 
 {!! Form::open(['url' => 'login', 'class' => 'measure left']) !!}	
     <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
-      <legend class="f4 fw6 ph0 mh0 fontbit">Sign In</legend>
-      <div class="mt3">
-        <label class="db fw6 lh-copy f6" for="email-address">Email</label>
-        <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="log"  id="email-address">
-      </div>
-      <div class="mv3">
-        <label class="db fw6 lh-copy f6" for="password">Password</label>
-        <input class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password"  id="password">
-      </div>
+      {!! Form::controlTachyons('input','log', 'E-Mail', $errors, "" , "Enter your email address", "(required)" ) !!}
+      {!! Form::controlTachyons('password','password', 'Password', $errors, "" , "Enter your password", "(required)" ) !!}
+
       <label class="pa0 ma0 lh-copy f6 pointer"><input type="checkbox"> Remember me</label>
     </fieldset>
     <div class="">

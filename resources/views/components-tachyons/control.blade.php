@@ -5,6 +5,9 @@
     @elseif($type == 'file')
         <label for="{{ $label }}" class="f6 b db mb2">{{ $name }} <span class="normal black-60">{{ $required }}</span></label>
         {!! Form::input($type, $label, $value, ['class' => 'input-reset ba b--black-20 pa2 mb2 db w-100','type'=>'file', 'placeholder' => $placeholder, 'aria-describedby' => "$label-desc"]) !!} 
+    @elseif($type == 'password')
+        <label for="{{ $label }}" class="f6 b db mb2">{{ $name }} <span class="normal black-60">{{ $required }}</span></label>
+        {!! Form::input($type, $label, $value, ['class' => 'input-reset ba b--black-20 pa2 mb2 db w-100','type'=>'password', 'placeholder' => $placeholder, 'aria-describedby' => "$label-desc"]) !!} 
     @else    
         <label for="{{ $label }}" class="f6 b db mb2">{{ $name }} <span class="normal black-60">{{ $required }}</span></label>
         {!! Form::input($type, $label, $value, ['class' => 'input-reset ba b--black-20 pa2 mb2 db w-100','type'=>'file', 'placeholder' => $placeholder, 'aria-describedby' => "$label-desc"]) !!} 
