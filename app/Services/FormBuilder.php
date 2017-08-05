@@ -55,7 +55,8 @@ class FormBuilder
             'value' => null,
             'helper' => null,
             'required' => '(required)',
-            'class' => 'mb4'
+            'class' => 'mb4',
+            'placeholder' => ''
         ]);
     }
 }
