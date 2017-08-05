@@ -33,7 +33,7 @@
 <script>
 $(function () {
 
-      hex2wav = new Hex2wav();
+      var hex2wav = new Hex2wav();
       var hex_cache = {};
 
       var uploadHex = function(hex_string)
@@ -49,7 +49,7 @@ $(function () {
           var hex_name = dom.getAttribute('programName');
 
           var normal_txt = "Download";
-          var getting_txt = "downloading hex..";
+          var getting_txt = "Loading..";
           var failed_txt = "retry..";
 
           dom.innerHTML = getting_txt;
