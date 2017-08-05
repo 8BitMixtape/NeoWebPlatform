@@ -27,7 +27,7 @@
     <div class="mt2">
       {{ $mixtapes->links('front.pagination') }}
     </div>
-    
+
   </div>
 </div>
 
@@ -58,7 +58,7 @@ $(function () {
 
           var normal_txt = "Download";
           var getting_txt = "Loading..";
-          var failed_txt = "retry..";
+          var failed_txt = "Retry..";
 
           dom.innerHTML = getting_txt;
 
