@@ -23,6 +23,11 @@
         @endforeach
       </tbody>
     </table>
+
+    <div class="mt2">
+      {{ $mixtapes->links('front.pagination') }}
+    </div>
+    
   </div>
 </div>
 
@@ -30,6 +35,9 @@
 
 
 @section("scripts")
+
+
+
 <script>
 $(function () {
 
