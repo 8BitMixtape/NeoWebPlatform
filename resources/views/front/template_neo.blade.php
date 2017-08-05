@@ -29,13 +29,21 @@
           title="Store">/DOCS</a>
         <a class="mw10 link db db-m di-m di-l pa2 tl neon-green dim black90 tracked-mega fontbit" href="#"
           title="Store">/BUY</a>
+
+        @if(session('statut') == 'visitor')
         <a class="mw10 link db db-m di-m di-l pa2 tl neon-green dim black90 tracked-mega fontbit" href="/login"
-          title="Store">/LOGIN</a>
+          title="Store">/LOGIN</a>            
+        @else
+        <a class="mw10 link db db-m di-m di-l pa2 tl neon-green dim black90 tracked-mega fontbit" href="/login"
+          title="Store">/MY_PROFILE</a>            
+        @endif
           
       </nav>
     </header>
     @yield('hero')
   </section>
+
+  @yield('usermenu')
 
   @yield('main')
 

@@ -34,8 +34,8 @@ class ExchangeController extends Controller
      */
     public function index()
     {
-        $mixtapes = $this->mixtapeRepository->getActiveWithUserOrderByDate(10);
-        return view('front.exchange', compact('mixtapes'));
+        $mixtapes = $this->mixtapeRepository->getActiveWithUserOrderByDate(2);
+        return view('exchange.index', compact('mixtapes'));
     }
 
     public function gethex($id)
@@ -43,5 +43,14 @@ class ExchangeController extends Controller
         return $this->mixtapeRepository->getById($id)->hex;
     }
 
+    public function upload()
+    {
+        return view('exchange.upload');
+    }
+
+    public function editprofile()
+    {
+        return view('exchange.editprofile');
+    }
 
 }

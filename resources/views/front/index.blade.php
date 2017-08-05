@@ -24,7 +24,7 @@
 
 @section('main')
 <section class="cf pa5-ns items-center  bg-white ">
-  <div class="fl w-100 w-100-m mt4 mt2-ns mb5-m w-60-l tc pa2">
+  <div class="fl w-100 w-100-m w-60-l tc">
 <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/NthrxNBOH2c' frameborder='0' allowfullscreen></iframe></div>
   </div>
 

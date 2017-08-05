@@ -58,3 +58,6 @@ Route::put('notifications/{notification}', 'NotificationController@update');
 // Exchange
 Route::get('exchange','ExchangeController@index');
 Route::get('exchange/hex/{id}','ExchangeController@gethex');
+Route::get('exchange/detail/{id}','ExchangeController@detail');
+Route::get('exchange/upload','ExchangeController@upload');
+Route::get('exchange/editprofile','ExchangeController@editprofile');
