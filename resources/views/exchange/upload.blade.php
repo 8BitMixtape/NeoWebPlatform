@@ -15,7 +15,7 @@
       {!! Form::controlTachyons('input','variant', 'Variant', $errors, "" , "What is the board variant?", "(required)" ) !!}
       {!! Form::controlTachyons('textarea','description', 'Description', $errors, "" , "What does your program do?", "(required)" ) !!}
       {!! Form::controlTachyons('input','url', 'Url', $errors, "" , "Misc url..", "(optional)" ) !!}
-      {!! Form::controlTachyons('file','hex', 'HEX', $errors, "" , "HEX File", "(required)" ) !!}
+      {!! Form::controlTachyons('file','hex', 'HEX', $errors, "" , "HEX File", "(required)" , "mb0") !!}
     </fieldset>
     <div class="">
       <input class="b ph3 pv2 input-reset ba b--black bg-transparent pointer f6 dib" type="submit" value="Upload">

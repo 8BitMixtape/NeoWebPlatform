@@ -1,4 +1,4 @@
-<div class="measure mb4 {{ $errors->has($name) ? 'has-error' : '' }}">
+<div class="measure {{ $class }} {{ $errors->has($name) ? 'has-error' : '' }}">
     @if($type == 'textarea')
         <label for="{{ $label }}" class="f6 b db mb2">{{ $name }} <span class="normal black-60">{{ $required }}</span></label>
         <textarea id="{{ $label }}" name="{{ $name }}" class="db border-box hover-black w-100 ba b--black-20 pa2 br2 mb2" aria-describedby="{{ $name }}-desc">{{ $value }}</textarea>    

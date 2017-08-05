@@ -12,7 +12,7 @@
   {!! Form::open(['url' => 'exchange', 'method' => 'post', 'class' => '']) !!}
   <fieldset id="" class="ba b--transparent ph0 mh0">
     {!! Form::controlTachyons('input','email', 'E-mail', $errors, "" , "Change your email address", "(optional)" ) !!} {!! Form::controlTachyons('textarea','description',
-    'Description', $errors, "" , "Change your profile description", "(optional)" ) !!}
+    'Description', $errors, "" , "Change your profile description", "(optional)", "mb0" ) !!}
   </fieldset>
   <div class="">
     <input class="b ph3 pv2 input-reset ba b--black bg-transparent pointer f6 dib" type="submit" value="Save changes">
