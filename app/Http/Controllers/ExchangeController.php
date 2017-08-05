@@ -34,7 +34,7 @@ class ExchangeController extends Controller
      */
     public function index()
     {
-        $mixtapes = $this->mixtapeRepository->getActiveWithUserOrderByDate(2);
+        $mixtapes = $this->mixtapeRepository->getActiveWithUserOrderByDate(4);
         return view('exchange.index', compact('mixtapes'));
     }
 
