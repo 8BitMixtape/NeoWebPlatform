@@ -39,21 +39,21 @@ class UserAreaController extends Controller
     public function index()
     {
         $mixtapes = $this->mixtapeRepository->getActiveWithUserOrderByDate(10);
-        return view('exchange.index', compact('mixtapes'));
+        return view('member.index', compact('mixtapes'));
     }
 
     public function editprofile()
     {
         return view('exchange.editprofile');
     }
-    
+
     public function list()
     {
         $id = Auth::id();
         $mixtapes = $this->mixtapeRepository->getActiveWithUserOrderByDate(10);
 
         // print_r($mixtapes);
-        return view('exchange.index', compact('mixtapes'));
+        return view('member.user_mixtape', compact('mixtapes'));
     }
 
 
