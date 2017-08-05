@@ -9,50 +9,20 @@
 @section("main")
 <div class="pa4">
   <h1 class="f4 bold center black mb4 fontbit center  tl-ns f2-ns black lh-copy lh-copy-m lh-title-ns tc">EDIT PROFILE</h1>
-  
-<form class="black-80">
-
+  {!! Form::open(['url' => 'exchange', 'method' => 'post', 'class' => '']) !!}
   <fieldset id="" class="ba b--transparent ph0 mh0">
-  
-    <div class="measure mb4">
-      <label for="email" class="f6 b db mb2">E-mail <span class="normal black-60">(optional)</span></label>
-      <input id="email" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="email-desc">
-      <small id="email-desc" class="f6 black-60 db mb2">Change your email address.</small>
-    </div>
-
-    <div class="measure mb4">
-      <label for="password" class="f6 b db mb2">Password <span class="normal black-60">(optional)</span></label>
-      <input id="password" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="password-desc">
-      <small id="password-desc" class="f6 black-60 db mb2">Change your password</small>
-    </div>
-
-    <div class="measure mb4">
-      <label for="description" class="f6 b db mb2">Description <span class="normal black-60">(optional)</span></label>
-      <textarea id="description" name="description" class="db border-box hover-black w-100 ba b--black-20 pa2 br2 mb2" aria-describedby="description-desc"></textarea>
-      <small id="description-desc" class="f6 black-60">Change your profile description</small>
-    </div>
-    
-
+    {!! Form::controlTachyons('input','email', 'E-mail', $errors, "" , "Change your email address", "(optional)" ) !!} {!! Form::controlTachyons('textarea','description',
+    'Description', $errors, "" , "Change your profile description", "(optional)" ) !!}
   </fieldset>
-
   <div class="">
     <input class="b ph3 pv2 input-reset ba b--black bg-transparent pointer f6 dib" type="submit" value="Save changes">
   </div>
-
-</form>
-  
-</form>
-
-
+  {!! Form::close() !!}
 </div>
-
 @endsection
 
 
 @section("scripts")
-
-
-
 <script>
 $(function () {
 

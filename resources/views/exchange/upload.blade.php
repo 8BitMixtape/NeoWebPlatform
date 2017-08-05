@@ -9,55 +9,19 @@
 @section("main")
 <div class="pa4">
   <h1 class="f4 bold center black mb4 fontbit center  tl-ns f2-ns black lh-copy lh-copy-m lh-title-ns tc">UPLOAD MIXTAPE</h1>
-  
-
-
-<form class="black-80">
-
-  <fieldset id="" class="ba b--transparent ph0 mh0">
-    <div class="measure mb4">
-      <label for="program" class="f6 b db mb2">Program <span class="normal black-60">(required)</span></label>
-      <input id="program" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="program-desc">
-      <small id="program-desc" class="f6 black-60 db mb2">What is your program name?</small>
+  {!! Form::open(['url' => 'exchange', 'method' => 'post', 'class' => 'black-80']) !!}
+    <fieldset id="" class="ba b--transparent ph0 mh0">
+      {!! Form::controlTachyons('input','program', 'Program', $errors, "" , "What is your program name?", "(required)" ) !!}
+      {!! Form::controlTachyons('input','variant', 'Variant', $errors, "" , "What is the board variant?", "(required)" ) !!}
+      {!! Form::controlTachyons('textarea','description', 'Description', $errors, "" , "What does your program do?", "(required)" ) !!}
+      {!! Form::controlTachyons('input','url', 'Url', $errors, "" , "Misc url..", "(optional)" ) !!}
+      {!! Form::controlTachyons('file','hex', 'HEX', $errors, "" , "HEX File", "(required)" ) !!}
+    </fieldset>
+    <div class="">
+      <input class="b ph3 pv2 input-reset ba b--black bg-transparent pointer f6 dib" type="submit" value="Upload">
     </div>
-
-    <div class="measure mb4">
-      <label for="variant" class="f6 b db mb2">Variant <span class="normal black-60">(required)</span></label>
-      <input id="variant" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="variant-desc">
-      <small id="variant-desc" class="f6 black-60 db mb2">What is the board variant?</small>
-    </div>
-
-    <div class="measure mb4">
-      <label for="description" class="f6 b db mb2">Description <span class="normal black-60">(required)</span></label>
-      <textarea id="description" name="description" class="db border-box hover-black w-100  ba b--black-20 pa2 br2 mb2" aria-describedby="description-desc"></textarea>
-      <small id="description-desc" class="f6 black-60">What does your program do?</small>
-    </div>
-
-    <div class="measure mb4">
-      <label for="url" class="f6 b db mb2">URL <span class="normal black-60">(optional)</span></label>
-      <input id="url" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="url-desc">
-      <small id="url-desc" class="f6 black-60 db mb2">Misc url..</small>
-    </div>
-
-    <div class="measure">
-      <label for="hexfile" class="f6 b db mb2">Hex File <span class="normal black-60">(required)</span></label>
-      <input id="hexfile" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="file" aria-describedby="hexfile-desc">
-      <small id="hexfile-desc" class="f6 black-60 db mb2">File description.</small>
-    </div>
-
-  </fieldset>
-
-  <div class="">
-    <input class="b ph3 pv2 input-reset ba b--black bg-transparent pointer f6 dib" type="submit" value="Upload">
-  </div>
-
-</form>
-  
-</form>
-
-
+  </form>
 </div>
-
 @endsection
 
 

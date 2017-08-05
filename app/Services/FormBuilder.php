@@ -7,22 +7,22 @@ use Form;
 class FormBuilder
 {
     /**
-     * Boot the Form Builder components.
+     * Boot the Form Builder components-bootstrap.
      *
      * @return void
      */
      public static function boot()
     {
-        Form::component('submitBootstrap', 'components.submit', [
+        Form::component('submitBootstrap', 'components-bootstrap.submit', [
             'value',
             'class' => '',
         ]);
-        Form::component('destroyBootstrap', 'components.destroy', [
+        Form::component('destroyBootstrap', 'components-bootstrap.destroy', [
             'value',
             'message',
             'class' => '',
         ]);
-        Form::component('controlBootstrap', 'components.control', [
+        Form::component('controlBootstrap', 'components-bootstrap.control', [
             'type',
             'columns',
             'name',
@@ -32,20 +32,29 @@ class FormBuilder
             'pop' => null,
             'placeholder' => '',
         ]);
-        Form::component('checkboxBootstrap', 'components.checkbox', [
+        Form::component('checkboxBootstrap', 'components-bootstrap.checkbox', [
             'name',
             'label',
         ]);
-        Form::component('checkboxHorizontalBootstrap', 'components.checkboxHorizontal', [
+        Form::component('checkboxHorizontalBootstrap', 'components-bootstrap.checkboxHorizontal', [
             'name',
             'label',
             'value',
         ]);
-        Form::component('selectBootstrap', 'components.select', [
+        Form::component('selectBootstrap', 'components-bootstrap.select', [
             'name',
             'list' => [],
             'selected' => null,
             'label' => null,
         ]);    	
+        Form::component('controlTachyons', 'components-tachyons.control', [
+            'type',
+            'label',
+            'name',            
+            'errors',
+            'value' => null,
+            'helper' => null,
+            'required' => '(required)'
+        ]);
     }
 }
