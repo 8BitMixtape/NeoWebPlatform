@@ -64,7 +64,7 @@ Route::get('exchange/detail/{id}','ExchangeController@detail');
 
 //User Area
 Route::get('member','UserAreaController@index');
-Route::get('member/mixtape','UserAreaController@list');
+Route::get('member/mixtape','UserAreaController@browse');
 Route::get('member/upload','UserAreaController@create');
 Route::get('member/editprofile','UserAreaController@editprofile');
 Route::resource('member', 'UserAreaController', ['except' => 'show']);

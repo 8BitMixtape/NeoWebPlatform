@@ -14,9 +14,9 @@ class MixtapeCreateRequest extends Request
         return [
             'name' => 'bail|required|max:100',
             'description' => 'bail|required',
-            'variant' => 'bail|required|max:100',
+            'variant' => 'bail|max:100',
             'hex' => 'bail|required',
-            'url' => 'bail|required'
+            'url' => 'bail|url'
         ];
     }
 }

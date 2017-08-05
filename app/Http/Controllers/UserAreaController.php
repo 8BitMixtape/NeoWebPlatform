@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 use App\Repositories\MixtapeRepository;
 use App\Http\Middleware\IsAjax;
@@ -38,8 +39,9 @@ class UserAreaController extends Controller
      */
     public function index()
     {
-        $mixtapes = $this->mixtapeRepository->getActiveWithUserOrderByDate(10);
-        return view('member.index', compact('mixtapes'));
+        $id = Auth::id();
+        $mixtapes = $this->mixtapeRepository->getMixtapesWithOrder(10, $id);
+        return view('member.user_mixtape', compact('mixtapes'));
     }
 
     public function editprofile()
@@ -47,12 +49,10 @@ class UserAreaController extends Controller
         return view('exchange.editprofile');
     }
 
-    public function list()
+    public function browse()
     {
         $id = Auth::id();
-        $mixtapes = $this->mixtapeRepository->getActiveWithUserOrderByDate(10);
-
-        // print_r($mixtapes);
+        $mixtapes = $this->mixtapeRepository->getMixtapesWithOrder(10, $id);
         return view('member.user_mixtape', compact('mixtapes'));
     }
 
@@ -70,7 +70,11 @@ class UserAreaController extends Controller
      */
     public function store(MixtapeCreateRequest $request)
     {
-        $this->mixtapeRepository->store($request->all(), $request->user()->id);
+        $file = $request->file('hex')->store('hex');
+        $hex_string = Storage::get($file);
+        Storage::delete([$file]);
+
+        $this->mixtapeRepository->store($request->all(), $request->user()->id, $hex_string);
         return redirect('/exchange');
     }
 

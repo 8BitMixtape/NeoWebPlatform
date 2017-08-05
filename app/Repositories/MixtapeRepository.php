@@ -41,14 +41,18 @@ class MixtapeRepository extends BaseRepository
      * @param  integer  $user_id
      * @return \App\Models\Post
      */
-    protected function saveMixtape($post, $inputs, $user_id = null)
+    protected function saveMixtape($post, $inputs, $user_id = null, $hex_string = null)
     {
         $post->name = $inputs['name'];
         $post->description = $inputs['description'];
         $post->variant = $inputs['variant'];
-        $post->hex = $inputs['hex'];
         $post->url = $inputs['url'];
         
+        if ($hex_string)
+        {
+            $post->hex = $hex_string;
+        }
+
         if ($user_id) {
             $post->user_id = $user_id;
         }        
@@ -223,9 +227,9 @@ class MixtapeRepository extends BaseRepository
      * @param  int    $user_id
      * @return void
      */
-    public function store($inputs, $user_id)
+    public function store($inputs, $user_id, $hex_string = null)
     {
-        $post = $this->saveMixtape(new $this->model, $inputs, $user_id);
+        $post = $this->saveMixtape(new $this->model, $inputs, $user_id, $hex_string);
 
         // Maybe purge orphan tags...
     }
