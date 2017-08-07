@@ -3,11 +3,13 @@ $(function () {
       var hex2wav = new Hex2wav();
       var hex_cache = {};
 
-      var uploadHex = function(hex_string)
+      var uploadHex = function(hex_string, cb)
       {
         var decoded_hex_array = hex2wav.decodeHexFile(hex_string);
         var signal = hex2wav.generateProgrammingSignal(decoded_hex_array);
+        var time = (signal.length/44100)*1000;
         hex2wav.playSignal(hex2wav.audioCtx, signal);
+        setTimeout(cb, time);
       }
 
       window.downloadHex = function(dom)
@@ -52,7 +54,13 @@ $(function () {
       {
         var hex_id = (event.getAttribute('value')); 
         console.log(hex_cache[hex_id]);     
-        uploadHex(hex_cache[hex_id]);
+
+        event.innerHTML = "Uploading..";
+
+        uploadHex(hex_cache[hex_id], function(){
+            event.innerHTML = "Retry";
+        });
+
         dom.preventDefault();
       }
 
