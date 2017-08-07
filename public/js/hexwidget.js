@@ -1,5 +1,6 @@
 $(function () {
 
+      var isuploading = false;
       var hex2wav = new Hex2wav();
       var hex_cache = {};
 
@@ -52,13 +53,21 @@ $(function () {
       //global
       window.uploadHexBtn = function(event, dom)
       {
+
+        if (isuploading) {
+          dom.preventDefault();
+          return;
+        }
+
         var hex_id = (event.getAttribute('value')); 
         console.log(hex_cache[hex_id]);     
 
         event.innerHTML = "Uploading..";
+        isuploading = true;
 
         uploadHex(hex_cache[hex_id], function(){
             event.innerHTML = "Retry";
+            isuploading = false;
         });
 
         dom.preventDefault();
