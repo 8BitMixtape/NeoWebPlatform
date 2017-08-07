@@ -67,4 +67,5 @@ Route::get('member','UserAreaController@index');
 Route::get('member/mixtape','UserAreaController@browse');
 Route::get('member/upload','UserAreaController@create');
 Route::get('member/editprofile','UserAreaController@editprofile');
+Route::get('member/mixtape/edit/{id}','UserAreaController@edit');
 Route::resource('member', 'UserAreaController', ['except' => 'show']);

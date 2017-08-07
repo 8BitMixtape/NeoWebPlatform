@@ -70,12 +70,26 @@ class UserAreaController extends Controller
      */
     public function store(MixtapeCreateRequest $request)
     {
-        $file = $request->file('hex')->store('hex');
-        $hex_string = Storage::get($file);
-        Storage::delete([$file]);
+        // $file = $request->file('hex')->store('hex');
+        // $hex_string = Storage::get($file);
+        // Storage::delete([$file]);
+        // $hex_string = getHexFromPaste($request->hex_string);
 
-        $this->mixtapeRepository->store($request->all(), $request->user()->id, $hex_string);
-        return redirect('/exchange');
+        $this->mixtapeRepository->store($request->all(), $request->user()->id);
+        return redirect('/member');
+    }
+
+
+    /**
+     * Show the form for editing the specified post.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $mixtape = $this->mixtapeRepository->getById($id);
+        return view('exchange.edit', compact('mixtape'));
     }
 
 }

@@ -57,3 +57,17 @@ if (!function_exists('userValid')) {
         return \App\Models\User::findOrFail($id)->valid;
     }
 }
+
+
+if (!function_exists('getHexFromPaste')) {
+function getHexFromPaste($content){
+		$start = ">>BEGIN_HEX<<";
+		$end = ">>END_HEX<<";
+		$r = explode($start, $content);
+		if (isset($r[1])){
+			$r = explode($end, $r[1]);
+			return str_replace("|", "\n", $r[0]);
+		}
+		return '';
+	}
+}
